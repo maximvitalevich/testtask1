@@ -5,6 +5,13 @@ namespace App\Http\Resources;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
+/**
+ * Class ErrorResource
+ *
+ * Response data if error grant
+ *
+ * @package App\Http\Resources
+ */
 class ErrorResource extends JsonResource
 {
     /**

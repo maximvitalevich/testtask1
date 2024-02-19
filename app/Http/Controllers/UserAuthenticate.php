@@ -11,8 +11,22 @@ use App\Services\UserService;
 use App\Services\UserSessionService;
 use Illuminate\Http\Resources\Json\JsonResource;
 
+/**
+ * Class UserAuthenticate
+ *
+ * @package App\Http\Controllers
+ */
 class UserAuthenticate extends Controller
 {
+    /**
+     * Main authenticate action
+     *
+     * @param AuthenticateRequest $request
+     * @param GrantService $grant
+     * @param UserService $userService
+     * @param UserSessionService $session
+     * @return JsonResource
+     */
     public function authenticate(
         AuthenticateRequest $request,
         GrantService $grant,

@@ -5,12 +5,30 @@ namespace App\Services;
 use App\Models\User;
 use Illuminate\Http\Request;
 
+/**
+ * Class UserService
+ *
+ * @package App\Services
+ */
 class UserService
 {
+    /**
+     * Search user in DB
+     *
+     * @param int $id
+     * @return User
+     */
     public function searchUser(int $id): User
     {
         return User::query()->findOrNew($id);
     }
+
+    /**
+     * Register user or update user information
+     *
+     * @param Request $request
+     * @return User
+     */
     public function register(Request $request): User
     {
         $user = $this->searchUser($request->get('id', 0));
