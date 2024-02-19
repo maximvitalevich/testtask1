@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class userFactory extends Factory
+class usersSessionFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -14,10 +14,8 @@ class userFactory extends Factory
     public function definition(): array
     {
         return [
-            'first_name' => $this->faker->name,
-            'last_name' => $this->faker->lastName,
-            'city' => $this->faker->city,
-            'country' => $this->faker->country,
+            'user_id' => 1,
+            'access_token' => '07b38cd0e778340eb40b25e005476ce8'
         ];
     }
 }
