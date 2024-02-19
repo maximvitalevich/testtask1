@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Http\Response;
+use App\Http\Controllers\UserAuthenticate;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,7 +18,5 @@ Route::get('/', static function () {
     return view('welcome');
 });
 
-Route::get('/user_auth', static function () {
-    return redirect('/api/user_auth', Response::HTTP_MOVED_PERMANENTLY);
-});
+Route::get('/user_auth', [UserAuthenticate::class, 'authenticate']);
 
