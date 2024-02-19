@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Models\User;
 use App\Models\UsersSession;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 
@@ -20,7 +21,7 @@ class UserSessionService
      * @param int $id
      * @return UsersSession
      */
-    public function searchSession(int $id): UsersSession
+    public function searchSession(int $id): Model
     {
         return UsersSession::query()->firstWhere('user_id', '=', $id);
     }

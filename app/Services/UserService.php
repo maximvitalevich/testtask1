@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Models\User;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 
 /**
@@ -18,7 +19,7 @@ class UserService
      * @param int $id
      * @return User
      */
-    public function searchUser(int $id): User
+    public function searchUser(int $id): Model
     {
         return User::query()->findOrNew($id);
     }
