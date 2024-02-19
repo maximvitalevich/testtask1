@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class usersSessionFactory extends Factory
+class UsersSessionFactory extends Factory
 {
     /**
      * Define the model's default state.
