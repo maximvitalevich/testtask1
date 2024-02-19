@@ -23,4 +23,3 @@ COPY --chmod=755 docker/supervisord.conf /etc/supervisor/supervisord.conf
 COPY --chmod=755 docker/app/entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT [ "/entrypoint.sh" ]
-CMD /usr/bin/supervisord -n -c /etc/supervisor/supervisord.conf
